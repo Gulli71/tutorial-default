@@ -1,13 +1,157 @@
 {
-    "atomType": "Molecule",
-    "x": 0,
-    "y": 0,
-    "uniqueID": "id-1",
-    "name": "tutorial-default",
-    "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
-    "unitsKey": "MM",
-    "fileTypeVersion": 1,
-    "filetypeVersion": 1
+  "atomType": "Molecule",
+  "x": 0,
+  "y": 0,
+  "uniqueID": "id-1",
+  "name": "tutorial-default",
+  "topLevel": true,
+  "allAtoms": [
+    {
+      "atomType": "Extrude",
+      "x": 0.4,
+      "y": 0.4,
+      "uniqueID": "id-11",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 15
+        }
+      ]
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.2,
+      "y": 0.6,
+      "uniqueID": "id-15",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 10
+        },
+        {
+          "name": "y length",
+          "ioValue": 10
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.2,
+      "y": 0.3,
+      "uniqueID": "id-19",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 15
+        }
+      ]
+    },
+    {
+      "atomType": "Output",
+      "x": 1,
+      "y": 0.5,
+      "uniqueID": "id-2",
+      "ioValues": [
+        {
+          "name": "number or geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.3,
+      "y": 0.6,
+      "uniqueID": "id-23",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": 0
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 3
+        }
+      ]
+    },
+    {
+      "atomType": "Difference",
+      "x": 0.4,
+      "y": 0.1,
+      "uniqueID": "id-29",
+      "ioValues": [
+        {
+          "name": "retain",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "remove",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Circle",
+      "x": 0.4,
+      "y": 0.4,
+      "uniqueID": "id-8",
+      "ioValues": [
+        {
+          "name": "diameter",
+          "ioValue": 20
+        }
+      ]
+    }
+  ],
+  "allConnectors": [
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-11",
+      "ap2ID": "id-2"
+    },
+    {
+      "ap2Name": "retain",
+      "ap1ID": "id-11",
+      "ap2ID": "id-29"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-15",
+      "ap2ID": "id-19"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-19",
+      "ap2ID": "id-23"
+    },
+    {
+      "ap2Name": "remove",
+      "ap1ID": "id-23",
+      "ap2ID": "id-29"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-8",
+      "ap2ID": "id-11"
+    }
+  ],
+  "unitsKey": "MM",
+  "fileTypeVersion": 1,
+  "filetypeVersion": 1
 }
